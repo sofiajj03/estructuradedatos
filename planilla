@@ -1,0 +1,87 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <vector>
+#include "conio.h"
+
+using namespace std;
+
+struct informacion {
+    vector <string> nombre;
+    vector <string> cargo;
+    vector <double> salarioBase;
+    vector <int> antiguedad;
+    vector <int> horasExtras;
+    vector <double>bonoAntiguedad;
+    vector <double> totalGanado;
+    vector <double> totalDescuentos;
+    vector <double>liquidoPagable;
+};
+
+int main()
+{
+    
+    informacion user;
+    string input;
+    double input2;
+    int input3;
+    int eleccion= 0;
+    cout << "(1) Ingresar informacion"<< endl;
+    cout << "(2) Mostrar informacion" << endl;
+    cin >> eleccion;
+        
+        switch (eleccion){
+        case 1:
+        cout <<"Ingrese el nombre del usuario"<< endl;
+        cin >> input;
+        user.nombre.push_back(input);
+        
+        cout <<"Ingrese el cargo del usuario"<< endl;
+        cin >> input;
+        user.cargo.push_back(input);
+        
+        cout <<"Ingrese el salario base del usuario"<< endl;
+        cin >> input2;
+        user.salarioBase.push_back(input2);
+        
+        cout <<"Ingrese la antiguedad del usuario"<< endl;
+        cin >> input3;
+        user.antiguedad.push_back(input3);
+        
+        cout <<"Ingrese las horas extras del usuario"<< endl;
+        cin >> input3;
+        user.horasExtras.push_back(input3);
+        
+        cout <<"Ingrese el bono antiguedad del usuario"<< endl;
+        cin >> input2;
+        user.bonoAntiguedad.push_back(input2);
+        
+        cout <<"Ingrese el total ganado del usuario"<< endl;
+        cin >> input2;
+        user.totalGanado.push_back(input2);
+        
+        cout <<"Ingrese el total descuentos del usuario"<< endl;
+        cin >> input2;
+        user.totalDescuentos.push_back(input2);
+        
+        
+        break;
+        
+        case 2 :
+        
+        
+        break;
+        
+        default:
+        
+        cout << "Opcion Invalida"<< endl;
+        }
+
+    return 0;
+}
