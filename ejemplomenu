@@ -1,0 +1,59 @@
+#include <iostream>
+#include "stdlib.h"
+
+using namespace std;
+
+//prototipos
+void triangulo();
+//void mayor();
+//bool primo();
+
+//main
+void main()
+{
+	int opcion;
+	do
+	{
+		cout << "**MENU**" << endl;
+		cout << "==========" << endl << endl;
+		cout << "1. Calcular el area de un triangulo" << endl;
+		cout << "2. Calcular el mayor de tres numeros" << endl;
+		cout << "3. Determinar si un  numero es primo o no" << endl;
+		cout << "Ingrese la opcion:";
+		cin >> opcion;
+		switch (opcion)
+		{
+			case 1: triangulo();
+				break;
+				/**
+			case 2: mayor();
+				break;
+				/*
+			case 3:if (primo())
+					cout << "El valor es primo";
+				  else
+					cout << "El valor no es primo";
+				break;
+			case 0: cout << "Salir";
+				break;
+			default: cout << "Opcion invalida";
+				break;
+				*/
+		}
+		system("pause");
+		system("cls");
+	} while (opcion != 0);
+
+}
+//funciones
+
+void triangulo()
+{
+	float a, b, area;
+	cout << "Ingrese la base:";
+	cin >> a;
+	cout << "Ingrese la altura:";
+	cin >> b;
+	area = (a * b) / 2;
+	cout << "El area es:" << area;
+}
