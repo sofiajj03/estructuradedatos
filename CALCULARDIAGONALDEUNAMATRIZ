@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n = 3; // tamaño de la matriz cuadrada
+    int matriz[3][3]; // matriz cuadrada de tamaño n x n
+
+    // inicializar la matriz con ceros
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            matriz[i][j] = 0;
+        }
+    }
+
+    // cargar los valores en las diagonales
+    int num = 1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == j) {
+                matriz[i][j] = num;
+                num++;
+            }
+            else if (i + j == n - 1) {
+                matriz[i][j] = num;
+                num++;
+            }
+            else if (i < j && i + j < n - 1) {
+                matriz[i][j] = num;
+                num++;
+            }
+            else if (i > j && i + j > n - 1) {
+                matriz[i][j] = num;
+                num++;
+            }
+        }
+    }
+
+    // imprimir la matriz resultante
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
