@@ -1,0 +1,95 @@
+#include <iostream>
+#include "conio.h"
+
+#define MAXCOL 20
+#define MAXROW 20
+
+using namespace std;
+
+void cargar(int matrix[MAXROW][MAXCOL], int n, int m);
+void mostrar(int matrix[MAXROW][MAXCOL], int n, int m);
+int menor(int matrix[MAXROW][MAXCOL], int n, int m);
+void clasificar_fila(int matrix[MAXROW][MAXCOL], int n, int m);
+
+void main()
+{
+	int n, m, matriz[MAXROW][MAXCOL];
+	// Validando las filas
+	do
+	{
+		cout << "Ingrese el numero de filas: ";
+		cin >> n;
+	} while ((n > MAXROW) || (n <= 0));
+
+	//Validando columnas
+	do
+	{
+		cout << "Ingrese el numero de columnas: ";
+		cin >> m;
+	} while ((m > MAXCOL) || (m <= 0));
+
+	cargar(matriz, n, m);
+	mostrar(matriz, n, m);
+	cout << "El mayor valor de la matriz es: " << menor( matriz, n, m);
+	clasificar_fila(matriz, n, m);
+	mostrar(matriz, n, m);
+	
+}
+
+void cargar(int matrix[MAXROW][MAXCOL], int n, int m)
+{
+	int i, j;
+
+	for (i = 0; i < n; i++)
+		for (j = 0; j < m; j++)
+		{
+			cout << "MAT [" << i << "] [" << j << "]: ";
+			cin >> matrix[i][j];
+		}
+}
+
+void mostrar(int matrix[MAXROW][MAXCOL], int n, int m)
+{
+	int i, j;
+
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+			cout << "MAT [" << i << "] [" << j << "]: " << matrix[i][j] << "\t";
+		cout << endl;
+	}
+}
+
+int menor(int matrix[MAXROW][MAXCOL], int n, int m)
+{
+	int tmenor, i, j;
+
+	tmenor = matrix[0][0];
+	for (i = 0; i < n; i++)
+		for (j = 0; j < m; j++)
+		{
+			if (tmenor < matrix[i][j])
+				tmenor = matrix[i][j];
+
+		}
+	return tmenor;
+
+}
+void clasificar_fila(int matrix[MAXROW][MAXCOL], int n, int m)
+{
+	int aux;
+	for (int i=0;i<n;i++)
+		for (int j=0;j<m;j++)
+			for (int x=0;x<n;x++)
+				for (int y = 0; y < m; y++)
+				{
+					if (matrix[i][j] < matrix
+						[x][y])
+					{
+						aux = matrix[i][j];
+					    matrix[i][j] = matrix[x][y];
+						matrix[x][y] = aux;
+					}
+				}
+
+}
