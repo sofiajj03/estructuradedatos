@@ -1,0 +1,16 @@
+EJERCICIO 1 condicional
+
+edad=int(input("Ingrese la edad:"))
+genero=(input("Ingrese que genero es:"))
+if(edad>=56):
+    print("Es mayor de edad")
+    
+    if(mayor>=56):
+    print("La mujer esta jubilada")
+  
+else:
+    print("No es mayor de edad")
+
+if(genero=="mujer"):
+else:
+    print(nombre,"La mujer esta jubilada")
