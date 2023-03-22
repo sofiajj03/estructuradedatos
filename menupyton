@@ -1,0 +1,10 @@
+while True:
+print("----MENU----")
+print ("Elija una opcion")
+print("1.Calcular sus horas trabajadas")
+print("2.Calcular su imc")
+print("3.Potencia de un numero")
+op= int(input("Ingrese lo que esta deseando")
+        
+
+    
