@@ -1,0 +1,21 @@
+numeros= [1,2,3,4,5,6,7]
+lista=numeros*5
+print (numeros)
+print (numeros[3])
+for i in numeros:
+    print (i)
+for i in range(len(numeros)):
+    print (numeros[i])
+numeros.append(3)
+print (numeros)
+numeros.insert(2,5)
+print (numeros)
+numeros.remove(5)
+print (numeros)
+prit (lista)
+numeros.extend(lista)
+print (numeros)
+x=lista.count(5)
+print(x)
+lista.sort()
+print (lista)
