@@ -1,0 +1,9 @@
+precio = [50, 75, 46, 22, 80, 65, 8]
+min = max = precio[0]
+for precio in precio:
+    if precio < min:
+        min = precio
+    elif precio > max:
+        max = precio
+print("El mínimo es " + str(min)) 
+print("El máximo es " + str(max))
