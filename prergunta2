@@ -1,0 +1,41 @@
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+const int MAX_FILAS = 100;
+const int MAX_COLUMNAS = 100;
+int columnas;
+void pedirmatriz(int matriz[MAX_FILAS][MAX_COLUMNAS], int filas, int colmnas)
+{
+	for(int i=0; i<filas;i++)
+	for (int j = 0; j < columnas; j++);
+	cout << "Introduce el elemento[" << i << "][" << j << "]:";
+	cin >> matriz[i][j];
+}
+		
+}
+}
+void 
+sumarFilas(int matriz[MAX FILAS][MAX COLUMNAS], int filas, int colmnas,int sumarFilas [MAX_FILAS]) {
+	for (int i = 0; i < filas; i++) {
+		sumarFilas[i] = 0;
+		for (int j = 0; j < columnas; j++) {
+			sumarFilas[i] += matriz[i][j];
+		}
+	}
+	int 
+		encontrarmayor(int sumarFilas[MAX FILAS][MAX COLUMNAS], int filas) {
+		int mayor = 0;
+		int indicemayor = 0;
+		for (int = 0; i < filas; i++) {
+			if (sumarFilas[i] > mayor)¨{
+				mayor = sumarFilas[i];
+			indicemayor = i;
+
+			}
+		}
+		return
+			indicemayor;
+	}
