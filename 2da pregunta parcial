@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+int matriz[1000][1000];
+
+void imprimir(int n,int m)
+{
+    for (int i = 0; i < n; i++) {
+            cout <<""<<endl;
+        for (int j = 0; j < m; j++) {
+            cout <<matriz[i][j]<<"   ";
+        }
+    }
+    cout <<""<<endl;
+}
+
+int suma(int n,int m)
+{
+    int a=0;
+    int suma[n];
+    int aux=0,max=-9999;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            aux=aux+matriz[i][j];
+        }
+        suma[i]=aux;
+        aux=0;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        if(max<suma[i]){
+            max=suma[i];
+            a=i;
+        }
+    }
+    return a;
+}
+
+
+int main() {
+    int n, m;
+    cout << "Ingrese el número de filas (n): ";
+    cin >> n;
+    cout << "Ingrese el número de columnas (m): ";
+    cin >> m;
+
+    matriz[n][m];
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout <<"Ingrese un numero:  ";
+            cin >> matriz[i][j];
+        }
+    }
+    
+    imprimir(n,m);
+    cout<<"La fila con mayor suma es:  "<<suma(n,m);
+
+    return 0;
+}
+
