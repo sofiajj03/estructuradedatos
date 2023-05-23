@@ -1,0 +1,10 @@
+numeros = input("Ingresa una muestra de números separados por comas: ")
+numeros_lista = [float(num) for num in numeros.split(",")]
+
+media = sum(numeros_lista) / len(numeros_lista)
+mayor = max(numeros_lista)
+menor = min(numeros_lista)
+
+print("Media:", media)
+print("Mayor:", mayor)
+print("Menor:", menor)
