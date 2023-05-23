@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class Transporte {
+private:
+    string Fechadeingreso;
+    string Fechadesalida;
+public:
+    Transporte(string, string);
+    void Nombre();
+    void Numerodebus();
+};
+
+Transporte::Transporte(string ingreso, string salida) {
+    Fechadeingreso = ingreso;
+    Fechadesalida = salida;
+}
+
+void Transporte::Nombre() {
+    cout << "El nombre es: " << Fechadeingreso << endl;
+}
+
+void Transporte::Numerodebus() {
+    cout << "El numero del bus es: " << Fechadesalida << endl;
+}
+
+int main() {
+    Transporte T1("3", "6");
+    T1.Nombre();
+    T1.Numerodebus();
+
+    return 0;
+}
