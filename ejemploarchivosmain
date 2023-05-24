@@ -1,0 +1,20 @@
+/
+
+#include <iostream>
+#include <fstream>
+#include <conio.h>
+#include "ABMAmigo.h"
+
+using namespace std;
+
+
+void main() {
+	ABMAmigo* amig = new ABMAmigo("amigOO.dat");
+	//amig->adicionarNuevo();
+	amig->listar();
+	amig->buscarReg();
+	//amig->eliminarReg();
+    //amig->modificarReg();
+	//amig->listar();
+	//getch();
+}
